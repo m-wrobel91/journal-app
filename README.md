@@ -6,7 +6,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/m-wrobel91/journal-app">
-    <img src="images/boo-solid.svg" alt="Logo" width="80" height="80">
+    <img src="images/book-solid.svg" alt="Logo" width="80" height="80">
 
   </a>
 
