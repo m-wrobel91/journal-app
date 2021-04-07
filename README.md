@@ -98,6 +98,6 @@ Michał Wróbel
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/micha%C5%82-wr%C3%B3bel-85055012a/
 [github-url]: https://github.com/m-wrobel91
-[product-screenshot1]: images/screenshot1.png
-[product-screenshot2]: images/screenshot2.png
+[product-screenshot1]: images/screenshot1.jpg
+[product-screenshot2]: images/screenshot2.jpg
 [app-logo]: images/book-solid.svg
