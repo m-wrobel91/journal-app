@@ -1,0 +1,158 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.sidebar {
+    
+    color: #fff;
+    width: 15%;
+    
+}
+
+.content-subhead {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 2px solid #aaa;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.content {
+    padding: 2em 1em 0;
+}
+.wrapped {    /*wrap text*/
+    -ms-word-break: break-all;
+    word-break: break-all;
+
+ /* Non standard for webkit */
+     word-break: break-word;
+
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    
+}
+
+.entries{
+    width: 70%;
+    padding: 2em;
+}
+
+.entry {
+    padding-bottom: 2em;
+}
+.entry-title {
+    font-size: 2em;
+    color: #222;
+    margin-bottom: 0.2em;
+}
+.entry-avatar {
+    border-radius: 50px;
+    float: right;
+    margin-left: 1em;
+	background: #aaa;
+
+}
+.entry-description {
+
+    font-family: Georgia, "Cambria", serif;
+    color: #444;
+    line-height: 1.8em;
+    border-bottom: 1px solid #eee;
+    /*align*/
+    text-align: justify;
+    /*wrap text*/
+    -ms-word-break: break-all;
+    word-break: break-all;
+
+ /* Non standard for webkit */
+     word-break: break-word;
+
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+}
+
+.justified{
+    /*align*/
+    text-align: justify;
+}
+
+.entry-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+}
+
+.entry-category {
+    margin: 0 0.1em;
+    padding: 0.3em 1em;
+    color: #fff;
+    background: #999;
+    font-size: 80%;
+}
+    .entry-category-general {
+        background: #5aba59;
+    }
+    .entry-category-recipe {
+        background: #4d85d1;
+    }
+    .entry-category-personal {
+        background: #8156a7;
+    }
+    .entry-category-js {
+        background: #df2d4f;
+    }
+
+.entry-images {
+    margin: 1em 0;
+}
+.entry-image-meta {
+    margin-top: -3.5em;
+    margin-left: 1em;
+    color: #fff;
+    text-shadow: 0 1px 1px #333;
+}
+/*error*/
+.error {
+    color: #ff0000;
+ }
+
+ .errorblock {
+    color: #000;
+    background-color: #ffEEEE;
+    border: 3px solid #ff0000;
+    padding: 8px;
+    margin: 16px;
+ }
+/*button edit & delete*/
+.button-delete,
+            .button-edit {
+                color: white;
+                border-radius: 4px;
+                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            }
+
+            .button-delete {
+                background: rgb(202, 60, 60);
+                /* this is a maroon */
+            }
+
+            .button-edit {
+                background: rgb(66, 184, 221);
+                /* this is a light blue */
+            }
+            .button-xsmall {
+                font-size: 70%;
+            }
+.sorting{
+    width: 60px;
+    border: 1px;
+}   
