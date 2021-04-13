@@ -8,19 +8,17 @@ import java.util.Optional;
 
 public interface JournalEntryService {
 
-    void addEntry(JournalEntryDto entryDto);
+    void add(JournalEntryDto entryDto);
 
-    List<JournalEntryDto> getAllEntries(Integer page);
-
-    List<JournalEntryDto> getAllOrderByColumn(Integer page, String sortColumn, Boolean ascendingOrder);
+    List<JournalEntryDto> getAll(Integer page, String sortColumn, Boolean ascendingOrder);
 
     List<JournalEntryDto> getEntriesForHomePage(Integer page);
 
-    JournalEntryDto getEntry(Integer id);
+    JournalEntryDto get(Integer id);
 
-    List<JournalEntryDto> findEntries(String phrase, Integer page);
+    List<JournalEntryDto> findByTitleOrContentContaining(String phrase, Integer page);
 
-    long countFindEntries(String phrase);
+    long countFoundByTitleOrContentContaining(String phrase);
 
     void update(JournalEntryDto entryDto);
 

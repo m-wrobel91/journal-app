@@ -16,23 +16,8 @@ public interface JournalEntryDao extends JpaRepository<JournalEntry, Integer> {
     @Query("SELECT e FROM JournalEntry e WHERE e.title LIKE %:phrase% OR e.content LIKE %:phrase%") //TODO case sensitive to neutralise
     List<JournalEntry> findByTitleOrContentContaining(@Param("phrase")String phrase, Pageable pageable);
 
-//    @Query("SELECT e FROM JournalEntry e WHERE e.title LIKE %:phrase% OR e.content LIKE %:phrase%")
-//    List<JournalEntry> findByTitleOrContentContaining(@Param("text")String phrase);
 
     @Query("SELECT COUNT(e) FROM JournalEntry e WHERE e.title LIKE %:phrase% OR e.content LIKE %:phrase%")
-    long countFindByTitleOrContentContaining(@Param("phrase")String phrase);
-/*
-    void saveEntry(JournalEntry entry);
+    long countFoundByTitleOrContentContaining(@Param("phrase")String phrase);
 
-    List<JournalEntry> getAll();
-
-    JournalEntry getEntry(Integer id);
-
-    Optional<List<JournalEntry>> findEntries(String text);
-
-    void update(JournalEntry entry);
-
-    void delete(Integer id);
-
- */
 }

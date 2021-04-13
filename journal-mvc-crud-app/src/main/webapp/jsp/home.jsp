@@ -71,6 +71,8 @@
                         <a href="/?page=${pageNo}">${pageNo+1}</a>
                     </c:forEach>
                     >
+                    <br>
+                    Current page: ${page+1}
                 </div>
         </center>
         <div class="sidebar pure-u-1 pure-u-md-1-5">

@@ -17,34 +17,23 @@ public class JournalEntryServiceImpl implements JournalEntryService {
     @Autowired
     private JournalEntryRepository repository;
 
-    public void addEntry(JournalEntryDto entryDto){
+    public void add(JournalEntryDto entryDto){
         JournalEntry entry = JournalEntryUtility.buildJournalEntry(entryDto);
         repository.add(entry);
     }
 
     @Override
-    public JournalEntryDto getEntry(Integer id) {
-        JournalEntry entry = repository.getEntry(id);
+    public JournalEntryDto get(Integer id) {
+        JournalEntry entry = repository.get(id);
         JournalEntryDto entryDto = JournalEntryUtility.buildJournalEntryDto(entry);
+
         return entryDto;
     }
 
-    public List<JournalEntryDto> getAllEntries(Integer page){
-
-        Iterable<JournalEntry> iterable = this.repository.findById(page);
-        List<JournalEntry> tempResult = new ArrayList<>();
-        iterable.forEach(tempResult::add);
-        List<JournalEntryDto> result = tempResult.stream()
-                .map(e -> JournalEntryUtility.buildJournalEntryDto(e))
-                .collect(Collectors.toList());
-
-        return result;
-
-    }
     @Override
-    public List<JournalEntryDto> getAllOrderByColumn(Integer page, String sortColumn, Boolean ascendingOrder){
+    public List<JournalEntryDto> getAll(Integer page, String sortColumn, Boolean ascendingOrder){
 
-        Iterable<JournalEntry> iterable = this.repository.findAllOrderByColumn(page, sortColumn, ascendingOrder);
+        Iterable<JournalEntry> iterable = this.repository.getAll(page, sortColumn, ascendingOrder);
         List<JournalEntry> tempResult = new ArrayList<>();
         iterable.forEach(tempResult::add);
         List<JournalEntryDto> result = tempResult.stream()
@@ -67,41 +56,26 @@ public class JournalEntryServiceImpl implements JournalEntryService {
     }
 
     @Override
-    public List<JournalEntryDto> findEntries(String phrase, Integer page) {
-        Iterable<JournalEntry> iterable = repository.findEntries(phrase, page);
+    public List<JournalEntryDto> findByTitleOrContentContaining(String phrase, Integer page) {
+        Iterable<JournalEntry> iterable = repository.findByTitleOrContentContaining(phrase, page);
         List<JournalEntry> tempResult = new ArrayList<>();
         iterable.forEach(tempResult::add);
         List<JournalEntryDto> result = tempResult.stream()
                 .map(e -> JournalEntryUtility.buildJournalEntryDto(e))
                 .collect(Collectors.toList());
-//        ///////////////////////////////////////
-//        iterable = repository.findAllOrderByColumn(page, JournalEntryRepository.SortByConstants.BY_TITLE, true);
-//        List<JournalEntry> tempResult1 = new ArrayList<>();
-//        iterable.forEach(tempResult1::add);
-//        List<JournalEntryDto> result1 = tempResult1.stream()
-//                .map(e -> JournalEntryUtility.buildJournalEntryDto(e))
-//                .collect(Collectors.toList());
-//        System.out.println("ASC " + result1);
-//        /////////////////////////////////////////////
-//        iterable = repository.findAllOrderByColumn(page, JournalEntryRepository.SortByConstants.BY_TITLE, false);
-//        List<JournalEntry> tempResult2 = new ArrayList<>();
-//        iterable.forEach(tempResult2::add);
-//        List<JournalEntryDto> result2 = tempResult2.stream()
-//                .map(e -> JournalEntryUtility.buildJournalEntryDto(e))
-//                .collect(Collectors.toList());
-//        System.out.println("DESC " + result2);
 
         return result;
     }
 
     @Override
-    public long countFindEntries(String phrase) {
-        return repository.countFindEntries(phrase);
+    public long countFoundByTitleOrContentContaining(String phrase) {
+        return repository.countFoundByTitleOrContentContaining(phrase);
     }
 
     @Override
     public void update(JournalEntryDto entryDto) {
         JournalEntry entry = JournalEntryUtility.buildJournalEntry(entryDto);
+
         repository.update(entry);
     }
 

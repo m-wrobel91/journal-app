@@ -18,21 +18,11 @@ public class JournalEntryController {
     @Autowired
     private JournalEntryService journalEntryService;
 
-    private JournalEntryService journalEntryService111;
-
     private String sortColumnChosen = "id";
     private Boolean isAscendingOrderChosen = true;
 
-    public String getSortColumnChosen() {
-        return sortColumnChosen;
-    }
-
     public void setSortColumnChosen(String sortColumnChosen) {
         this.sortColumnChosen = sortColumnChosen;
-    }
-
-    public Boolean getAscendingOrderChosen() {
-        return isAscendingOrderChosen;
     }
 
     public void setAscendingOrderChosen(Boolean ascendingOrderChosen) {
@@ -46,22 +36,25 @@ public class JournalEntryController {
         ModelAndView mv = new ModelAndView();
         mv.addObject(ModelConstants.ENTRIES, entries);
         mv.addObject(ModelConstants.NO_OF_PAGES, noOfPages);
+        mv.addObject("page", page);
         mv.setViewName(ViewConstants.HOME_JSP);
+
         return mv;
     }
 
     @RequestMapping(value = RequestMappingConstants.ENTRY, method =RequestMethod.GET)
-    public ModelAndView entry(@ModelAttribute(ModelConstants.ENTRY_DTO) JournalEntryDto entryDto){
+    public ModelAndView showEntry(@ModelAttribute(ModelConstants.ENTRY_DTO) JournalEntryDto entryDto){
         ModelAndView mv = new ModelAndView();
         mv.addObject(ModelConstants.MESSAGE, UiMessagesConstants.MSG_ADD);
         mv.addObject(ModelConstants.FUNCTION_NAME, FunctionNamesConstants.FUN_ADD_ENTRY);
         mv.addObject(ModelConstants.CATEGORIES, JournalEntry.Category.values());
         mv.setViewName(ViewConstants.ENTRY_FORM_JSP);
+
         return mv;
     }
 
     @RequestMapping(value = RequestMappingConstants.ADD_ENTRY, method =RequestMethod.POST)
-    public ModelAndView addEntry(@Valid @ModelAttribute(ModelConstants.ENTRY_DTO) JournalEntryDto entryDto, BindingResult bindingResult){
+    public ModelAndView add(@Valid @ModelAttribute(ModelConstants.ENTRY_DTO) JournalEntryDto entryDto, BindingResult bindingResult){
         ModelAndView mv = new ModelAndView();
         mv.addObject(ModelConstants.ENTRY_DTO, entryDto);
         mv.addObject(ModelConstants.CATEGORIES, JournalEntry.Category.values());
@@ -70,19 +63,21 @@ public class JournalEntryController {
             mv.addObject(ModelConstants.MESSAGE, UiMessagesConstants.MSG_ADD);
             mv.addObject(ModelConstants.FUNCTION_NAME, FunctionNamesConstants.FUN_ADD_ENTRY);
             mv.setViewName(ViewConstants.ENTRY_FORM_JSP);
+
             return mv;
         }
 
-        journalEntryService.addEntry(entryDto);
+        journalEntryService.add(entryDto);
 
         mv.addObject(ModelConstants.MESSAGE, UiMessagesConstants.MSG_ADDED);
         mv.setViewName(ViewConstants.ENTRY_JSP);
+
         return mv;
     }
 
     @RequestMapping(value = RequestMappingConstants.GET_ENTRY, method =RequestMethod.GET)
-    public ModelAndView getEntry(@PathVariable Integer id){
-        JournalEntryDto entryDto = journalEntryService.getEntry(id);
+    public ModelAndView get(@PathVariable Integer id){
+        JournalEntryDto entryDto = journalEntryService.get(id);
 
         ModelAndView mv = new ModelAndView();
         mv.addObject(ModelConstants.MESSAGE, UiMessagesConstants.MSG_UPDATE);
@@ -90,11 +85,12 @@ public class JournalEntryController {
         mv.addObject(ModelConstants.CATEGORIES, JournalEntry.Category.values());
         mv.addObject(ModelConstants.FUNCTION_NAME, FunctionNamesConstants.FUN_UPDATE_ENTRY);
         mv.setViewName(ViewConstants.ENTRY_FORM_JSP);
+
         return mv;
     }
 
     @RequestMapping(value = RequestMappingConstants.UPDATE_ENTRY, method =RequestMethod.POST)
-    public ModelAndView updateEntry(@Valid @ModelAttribute(ModelConstants.ENTRY_DTO) JournalEntryDto entryDto, BindingResult bindingResult){
+    public ModelAndView update(@Valid @ModelAttribute(ModelConstants.ENTRY_DTO) JournalEntryDto entryDto, BindingResult bindingResult){
 
         ModelAndView mv = new ModelAndView();
         mv.addObject(ModelConstants.ENTRY_DTO, entryDto);
@@ -104,38 +100,40 @@ public class JournalEntryController {
             mv.addObject(ModelConstants.MESSAGE, UiMessagesConstants.MSG_UPDATE);
             mv.addObject(ModelConstants.FUNCTION_NAME, FunctionNamesConstants.FUN_UPDATE_ENTRY);
             mv.setViewName(ViewConstants.ENTRY_FORM_JSP);
+
             return mv;
         }
         journalEntryService.update(entryDto);
 
         mv.addObject(ModelConstants.MESSAGE, UiMessagesConstants.MSG_UPDATED);
         mv.setViewName(ViewConstants.ENTRY_JSP);
+
         return mv;
     }
 
     @RequestMapping(value = RequestMappingConstants.DELETE_ENTRY, method = RequestMethod.GET)
-    public ModelAndView deleteEntry(@ModelAttribute(ModelConstants.ENTRY_DTO) JournalEntryDto entryDto) {
+    public ModelAndView delete(@ModelAttribute(ModelConstants.ENTRY_DTO) JournalEntryDto entryDto) {
 
-        entryDto = journalEntryService.getEntry(entryDto.getId());
+        entryDto = journalEntryService.get(entryDto.getId());
         journalEntryService.delete(entryDto.getId());
 
         ModelAndView mv = new ModelAndView();
         mv.addObject(ModelConstants.ENTRY_DTO, entryDto);
         mv.addObject(ModelConstants.MESSAGE, UiMessagesConstants.MSG_DELETED);
         mv.setViewName(ViewConstants.ENTRY_JSP);
+
         return mv;
     }
 
     @RequestMapping(value = RequestMappingConstants.GET_ALL_ENTRIES, method = RequestMethod.GET)
-    public ModelAndView getAllEntries(
+    public ModelAndView getAll(
             @RequestParam(defaultValue = "0") Integer page,
             @RequestParam(defaultValue = "id") String sortColumn,
             @RequestParam(defaultValue = "true") Boolean ascendingOrder){
-        //resetting sort
         this.setSortColumnChosen(sortColumn);
         this.setAscendingOrderChosen(ascendingOrder);
 
-        List<JournalEntryDto> entries = journalEntryService.getAllOrderByColumn(page, this.sortColumnChosen, this.isAscendingOrderChosen);//TODO zmienic nazwe
+        List<JournalEntryDto> entries = journalEntryService.getAll(page, this.sortColumnChosen, this.isAscendingOrderChosen);//TODO zmienic nazwe
 
         long noOfPages = JournalEntryUtility.getNoOfPages(journalEntryService.count());
         ModelAndView mv = new ModelAndView();
@@ -145,6 +143,7 @@ public class JournalEntryController {
         mv.addObject("sortColumn", sortColumnChosen);
         mv.addObject("ascendingOrder", isAscendingOrderChosen);
         mv.setViewName(ViewConstants.ENTRIES_JSP);
+
         return mv;
 
     }
@@ -155,9 +154,9 @@ public class JournalEntryController {
     }
 
     @RequestMapping(value = RequestMappingConstants.SEARCH_ENTRIES, method = RequestMethod.GET)
-    public ModelAndView findEntries(@ModelAttribute(ModelConstants.PHRASE) String phrase, @RequestParam(defaultValue = "0") Integer page){
-        long noOfPages = JournalEntryUtility.getNoOfPages(journalEntryService.countFindEntries(phrase));
-        List<JournalEntryDto> result = journalEntryService.findEntries(phrase, page);
+    public ModelAndView findByTitleOrContentContaining(@ModelAttribute(ModelConstants.PHRASE) String phrase, @RequestParam(defaultValue = "0") Integer page){
+        long noOfPages = JournalEntryUtility.getNoOfPages(journalEntryService.countFoundByTitleOrContentContaining(phrase));
+        List<JournalEntryDto> result = journalEntryService.findByTitleOrContentContaining(phrase, page);
 
         ModelAndView mv = new ModelAndView();
         if(result.size() == 0){
@@ -168,6 +167,7 @@ public class JournalEntryController {
         mv.addObject(ModelConstants.NO_OF_PAGES, noOfPages);
         mv.addObject(ModelConstants.ENTRIES, result);
         mv.setViewName(ViewConstants.SEARCH_RESULTS_JSP);
+
         return mv;
     }
 
@@ -215,7 +215,6 @@ public class JournalEntryController {
         String UPDATE_ENTRY = "/updateEntry";
         String DELETE_ENTRY = "/deleteEntry{id}";
         String GET_ALL_ENTRIES = "/getAllEntries";
-        String GET_ALL_ENTRIES_SORTED = "/getAllEntriesSorted";
         String SHOW_SEARCH = "/showSearch";
         String SEARCH_ENTRIES = "/searchEntries";
     }
