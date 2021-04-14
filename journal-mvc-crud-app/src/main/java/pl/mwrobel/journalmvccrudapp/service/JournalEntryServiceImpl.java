@@ -31,6 +31,18 @@ public class JournalEntryServiceImpl implements JournalEntryService {
     }
 
     @Override
+    public void update(JournalEntryDto entryDto) {
+        JournalEntry entry = JournalEntryUtility.buildJournalEntry(entryDto);
+
+        repository.update(entry);
+    }
+
+    @Override
+    public void delete(Integer entryId) {
+        repository.delete(entryId);
+    }
+
+    @Override
     public List<JournalEntryDto> getAll(Integer page, String sortColumn, Boolean ascendingOrder){
 
         Iterable<JournalEntry> iterable = this.repository.getAll(page, sortColumn, ascendingOrder);
@@ -70,18 +82,6 @@ public class JournalEntryServiceImpl implements JournalEntryService {
     @Override
     public long countFoundByTitleOrContentContaining(String phrase) {
         return repository.countFoundByTitleOrContentContaining(phrase);
-    }
-
-    @Override
-    public void update(JournalEntryDto entryDto) {
-        JournalEntry entry = JournalEntryUtility.buildJournalEntry(entryDto);
-
-        repository.update(entry);
-    }
-
-    @Override
-    public void delete(Integer entryId) {
-        repository.delete(entryId);
     }
 
     @Override

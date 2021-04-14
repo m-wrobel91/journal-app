@@ -10,19 +10,19 @@ public interface JournalEntryService {
 
     void add(JournalEntryDto entryDto);
 
-    List<JournalEntryDto> getAll(Integer page, String sortColumn, Boolean ascendingOrder);
-
-    List<JournalEntryDto> getEntriesForHomePage(Integer page);
-
     JournalEntryDto get(Integer id);
-
-    List<JournalEntryDto> findByTitleOrContentContaining(String phrase, Integer page);
-
-    long countFoundByTitleOrContentContaining(String phrase);
 
     void update(JournalEntryDto entryDto);
 
     void delete(Integer entryId);
+
+    List<JournalEntryDto> getAll(Integer page, String sortColumn, Boolean ascendingOrder);
+
+    List<JournalEntryDto> getEntriesForHomePage(Integer page);
+
+    List<JournalEntryDto> findByTitleOrContentContaining(String phrase, Integer page);
+
+    long countFoundByTitleOrContentContaining(String phrase);
 
     long count();
 }

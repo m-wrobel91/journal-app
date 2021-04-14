@@ -21,36 +21,12 @@ public class JournalEntryController {
     private String sortColumnChosen = "id";
     private Boolean isAscendingOrderChosen = true;
 
-    public void setSortColumnChosen(String sortColumnChosen) {
+    private void setSortColumnChosen(String sortColumnChosen) {
         this.sortColumnChosen = sortColumnChosen;
     }
 
-    public void setAscendingOrderChosen(Boolean ascendingOrderChosen) {
-        isAscendingOrderChosen = ascendingOrderChosen;
-    }
-
-    @RequestMapping(value = RequestMappingConstants.HOME, method =RequestMethod.GET)
-    public ModelAndView home(@RequestParam(defaultValue = "0") Integer page){
-        List<JournalEntryDto> entries = journalEntryService.getEntriesForHomePage(page);
-        long noOfPages = JournalEntryUtility.getNoOfPagesForHome(journalEntryService.count());
-        ModelAndView mv = new ModelAndView();
-        mv.addObject(ModelConstants.ENTRIES, entries);
-        mv.addObject(ModelConstants.NO_OF_PAGES, noOfPages);
-        mv.addObject("page", page);
-        mv.setViewName(ViewConstants.HOME_JSP);
-
-        return mv;
-    }
-
-    @RequestMapping(value = RequestMappingConstants.ENTRY, method =RequestMethod.GET)
-    public ModelAndView showEntry(@ModelAttribute(ModelConstants.ENTRY_DTO) JournalEntryDto entryDto){
-        ModelAndView mv = new ModelAndView();
-        mv.addObject(ModelConstants.MESSAGE, UiMessagesConstants.MSG_ADD);
-        mv.addObject(ModelConstants.FUNCTION_NAME, FunctionNamesConstants.FUN_ADD_ENTRY);
-        mv.addObject(ModelConstants.CATEGORIES, JournalEntry.Category.values());
-        mv.setViewName(ViewConstants.ENTRY_FORM_JSP);
-
-        return mv;
+    private void setAscendingOrderChosen(Boolean ascendingOrderChosen) {
+        this.isAscendingOrderChosen = ascendingOrderChosen;
     }
 
     @RequestMapping(value = RequestMappingConstants.ADD_ENTRY, method =RequestMethod.POST)
@@ -146,6 +122,30 @@ public class JournalEntryController {
 
         return mv;
 
+    }
+
+    @RequestMapping(value = RequestMappingConstants.HOME, method =RequestMethod.GET)
+    public ModelAndView home(@RequestParam(defaultValue = "0") Integer page){
+        List<JournalEntryDto> entries = journalEntryService.getEntriesForHomePage(page);
+        long noOfPages = JournalEntryUtility.getNoOfPagesForHome(journalEntryService.count());
+        ModelAndView mv = new ModelAndView();
+        mv.addObject(ModelConstants.ENTRIES, entries);
+        mv.addObject(ModelConstants.NO_OF_PAGES, noOfPages);
+        mv.addObject("page", page);
+        mv.setViewName(ViewConstants.HOME_JSP);
+
+        return mv;
+    }
+
+    @RequestMapping(value = RequestMappingConstants.ENTRY, method =RequestMethod.GET)
+    public ModelAndView showEntry(@ModelAttribute(ModelConstants.ENTRY_DTO) JournalEntryDto entryDto){
+        ModelAndView mv = new ModelAndView();
+        mv.addObject(ModelConstants.MESSAGE, UiMessagesConstants.MSG_ADD);
+        mv.addObject(ModelConstants.FUNCTION_NAME, FunctionNamesConstants.FUN_ADD_ENTRY);
+        mv.addObject(ModelConstants.CATEGORIES, JournalEntry.Category.values());
+        mv.setViewName(ViewConstants.ENTRY_FORM_JSP);
+
+        return mv;
     }
 
     @RequestMapping(value = RequestMappingConstants.SHOW_SEARCH, method = RequestMethod.GET)

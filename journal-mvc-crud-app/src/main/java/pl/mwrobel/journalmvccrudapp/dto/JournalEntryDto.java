@@ -103,7 +103,6 @@ public class JournalEntryDto {
         private String title;
         private String category;
         private String content;
-        private String locale;
 
         public JournalEntryDto.JournalEntryDtoBuilder buildId(Integer id){
             this.id = id;
@@ -128,10 +127,7 @@ public class JournalEntryDto {
             this.content = content.replaceAll("(\r\n|\n\r|\r|\n)", "<br />");//TODO!!!
             return this;
         }
-        public JournalEntryDto.JournalEntryDtoBuilder buildLocale(String locale){
-            this.locale = locale;
-            return this;
-        }
+
 
         public JournalEntryDto build(){
             JournalEntryDto entryDto = new JournalEntryDto();
@@ -140,7 +136,6 @@ public class JournalEntryDto {
             entryDto.title = this.title;
             entryDto.category = this.category;
             entryDto.content = this.content;
-            //entryDto.locale = this.locale;
 
             return entryDto;
         }

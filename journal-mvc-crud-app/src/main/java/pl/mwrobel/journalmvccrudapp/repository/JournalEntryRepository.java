@@ -23,17 +23,6 @@ public class JournalEntryRepository {
         return journalEntryDao.getOne(id);
     }
 
-    public Iterable<JournalEntry> findByTitleOrContentContaining(String phrase, Integer page){
-
-        Pageable pageRequest = PageRequest.of(page, PaginationConstants.NO_OF_ELEMENTS_FOR_COLLECTIVE_VIEW, Sort.by("id").ascending());
-        Iterable<JournalEntry> result = journalEntryDao.findByTitleOrContentContaining(phrase, pageRequest);
-
-        return result;
-    }
-    public long countFoundByTitleOrContentContaining(String phrase){
-        return journalEntryDao.countFoundByTitleOrContentContaining(phrase);
-    }
-
     public void update(JournalEntry entry) {
         JournalEntry entryFromDb = journalEntryDao.findById(entry.getId())
                 .orElseThrow(()-> new NoSuchElementException("No element with specified ID in DB: " + entry.getId()));
@@ -47,26 +36,26 @@ public class JournalEntryRepository {
         journalEntryDao.deleteById(entryId);
     }
 
-    public long count(){
-        return journalEntryDao.count();
-    }
-
     public Iterable<JournalEntry> findByTimestampForHome(Integer page){
         Pageable sortedByTimestampForHomePage = PageRequest.of(page, PaginationConstants.NO_OF_ELEMENTS_FOR_HOME_VIEW, Sort.by("timestamp").descending());
 
         return journalEntryDao.findAll(sortedByTimestampForHomePage);
     }
 
-    public Iterable<JournalEntry> getAll(Integer page, String sortColumn, Boolean ascendingOrder){
-        if (ascendingOrder) {
-            Pageable sortedById = PageRequest.of(page, PaginationConstants.NO_OF_ELEMENTS_FOR_COLLECTIVE_VIEW, Sort.by(sortColumn).ascending());
+    public Iterable<JournalEntry> findByTitleOrContentContaining(String phrase, Integer page){
 
-            return journalEntryDao.findAll(sortedById);
-        }
+        Pageable pageRequest = PageRequest.of(page, PaginationConstants.NO_OF_ELEMENTS_FOR_COLLECTIVE_VIEW, Sort.by("id").ascending());
+        Iterable<JournalEntry> result = journalEntryDao.findByTitleOrContentContaining(phrase, pageRequest);
 
-        Pageable sortedById = PageRequest.of(page, PaginationConstants.NO_OF_ELEMENTS_FOR_COLLECTIVE_VIEW, Sort.by(sortColumn).descending());
+        return result;
+    }
 
-        return journalEntryDao.findAll(sortedById);
+    public long countFoundByTitleOrContentContaining(String phrase){
+        return journalEntryDao.countFoundByTitleOrContentContaining(phrase);
+    }
+
+    public long count(){
+        return journalEntryDao.count();
     }
 
     public interface PaginationConstants{

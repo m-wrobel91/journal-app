@@ -20,7 +20,7 @@ public class JournalEntryUtility {
                 .buildTitle(entryDto.getTitle())
                 .buildCategory(entryDto.getCategory())
                 .buildContent(entryDto.getContent())
-                .buildLocale("Poland") //todo: where the entry was added from
+                .buildLocale("Poland") //TODO: where the entry was added from
                 .build();
     }
 
@@ -31,7 +31,6 @@ public class JournalEntryUtility {
                 .buildTitle(entry.getTitle())
                 .buildCategory(entry.getCategory())
                 .buildContent(entry.getContent())
-                .buildLocale("Poland") //todo: analyse1
                 .build();
     }
 
