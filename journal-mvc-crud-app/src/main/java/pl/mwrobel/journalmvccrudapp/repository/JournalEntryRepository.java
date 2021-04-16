@@ -36,6 +36,18 @@ public class JournalEntryRepository {
         journalEntryDao.deleteById(entryId);
     }
 
+    public Iterable<JournalEntry> getAll(Integer page, String sortColumn, Boolean ascendingOrder){
+        if (ascendingOrder) {
+            Pageable sortedById = PageRequest.of(page, PaginationConstants.NO_OF_ELEMENTS_FOR_COLLECTIVE_VIEW, Sort.by(sortColumn).ascending());
+
+            return journalEntryDao.findAll(sortedById);
+        }
+
+        Pageable sortedById = PageRequest.of(page, PaginationConstants.NO_OF_ELEMENTS_FOR_COLLECTIVE_VIEW, Sort.by(sortColumn).descending());
+
+        return journalEntryDao.findAll(sortedById);
+    }
+
     public Iterable<JournalEntry> findByTimestampForHome(Integer page){
         Pageable sortedByTimestampForHomePage = PageRequest.of(page, PaginationConstants.NO_OF_ELEMENTS_FOR_HOME_VIEW, Sort.by("timestamp").descending());
 
