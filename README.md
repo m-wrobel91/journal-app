@@ -33,6 +33,7 @@
     <li>
       <a href="#about-the-project">About the Project</a>
       <ul>
+        <li><a href="#uml-class-diagram">UML class diagram</a></li>
         <li><a href="#built-with">Built with</a></li>
         <li><a href="#more-to-go">More to go</a></li>
       </ul>
@@ -49,17 +50,38 @@
   
 :notebook: Application is a simple journal that allows for adding new entries, update and delete existing one. User also might look for the specific entry using Search form. While adding or updating the entry the data inserted is validated. Entries in the journal might be categorized.
 
-[![journal-mvc-crud-app][screenshot1]](images/screenshot_main.png)
-
+<div align="center">
+  <figure>
+    <a href="images/screenshot_main.png"><img src="images/screenshot_main.png" height="auto" width="450" style="border-radius:5px"></a>
+    <figcaption>Fig.1 - Screenshot from the application.</figcaption>
+    </figure>
+</div>
 This project was created in order to learn more on java web applications and acquire good programming habits.  Great attention was paid on clean code rules while writing the code. Domain-driven-design principles were followed while building the application. Each of the domain layer has its own role in the application - some of them might have been used a bit excessively taking into consideration app simplicity. Journal is backed by H2 database. For retrieving and saving data to database JPA Repository was used - that allowed for simple sorting and pagination of retrieved data.
 
-[![Validation on the form][screenshot2]](images/screenshot_validation.png)
+<div align="center">
+  <figure>
+    <a href="images/screenshot_validation.png"><img src="images/screenshot_validation.png" height="auto" width="450" style="border-radius:5px"></a>
+    <figcaption>Fig.2 - Form input validation.</figcaption>
+    </figure>
+</div>
 
-[![Search results][screenshot3]](images/screenshot_search.png)
+<div align="center">
+  <figure>
+    <a href="images/screenshot_search.png"><img src="images/screenshot_search.png" height="auto" width="450" style="border-radius:5px"></a>
+    <figcaption>Fig.3 - Search results that allow on edition and deletion.</figcaption>
+    </figure>
+</div>
+
+
 ### UML class diagram
 Find below UML class diagram for the application:
 
-[![UML diagram][UML-diagram]](images/journal-app_UML_class.png)
+<div align="center">
+  <figure>
+    <a href="images/journal-app_UML_class.png"><img src="images/journal-app_UML_class.png" height="auto" width="600" style="border-radius:5px"></a>
+    <figcaption>Fig.4 - UML class diagram.</figcaption>
+    </figure>
+</div>
 
 ### Built With
 
@@ -106,8 +128,4 @@ Michał Wróbel
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/micha%C5%82-wr%C3%B3bel-85055012a/
 [github-url]: https://github.com/m-wrobel91
-[screenshot1]: images/screenshot_main_mini.png
-[screenshot2]: images/screenshot_validation_mini.png
-[screenshot3]: images/screenshot_search_mini.png
-[UML-diagram]: images/journal-app_UML_class_mini.png
 [app-logo]: images/book-solid.svg
