@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e38b7f3f-940c-446b-8121-95bcda128c11" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../journal-mvc-crud-app GIT" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ptVvL0JGeXMNApTiGJNjfiRyqU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../journal-mvc-crud-app GIT" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mwrobel\Desktop\dev\journal-mvc-crud-app\src\main\webapp\images" />
+      <recent name="C:\Users\mwrobel\Desktop\dev\journal-mvc-crud-app\src\main\webapp" />
+      <recent name="C:\Users\mwrobel\Desktop\dev\journal-mvc-crud-app\src\main\webapp\jsp\css" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pl.mwrobel.journalmvccrudapp.repository" />
+      <recent name="pl.mwrobel.journalmvccrudapp.dao" />
+      <recent name="pl.mwrobel.journalmvccrudapp.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mwrobel\Desktop\dev\journal-mvc-crud-app\src\main\resources" />
+      <recent name="C:\Users\mwrobel\Desktop\dev\journal-mvc-crud-app\src\main\webapp\jsp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Maven.journal-mvc-crud-app [spring-boot:run]">
+    <configuration name="JournalEntryH2DbDaoImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.mwrobel.journalmvccrudapp.dao.JournalEntryH2DbDaoImpl" />
+      <module name="journal-app" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="spring-boot:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="journal-mvc-crud-app [spring-boot:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="spring-boot:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map>
+                <entry key="Dspring.output.ansi.enabled=always" value="false" />
+              </map>
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="run-app-wait-for-debug" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="spring-boot:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map>
+                <entry key="Dspring-boot.run.jvmArguments=-Xdebug" value="false" />
+                <entry key="Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" value="false" />
+              </map>
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="RemoteDebug" type="Remote">
+      <module name="journal-app" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="8000" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="8000" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.JournalEntryH2DbDaoImpl" />
+      <item itemvalue="Maven.journal-mvc-crud-app [spring-boot:run]" />
+      <item itemvalue="Maven.run-app-wait-for-debug" />
+      <item itemvalue="Remote.RemoteDebug" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.JournalEntryH2DbDaoImpl" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\mwrobel\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e38b7f3f-940c-446b-8121-95bcda128c11" name="Default Changelist" comment="" />
+      <created>1616002603299</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616002603299</updated>
+    </task>
+    <task id="LOCAL-00001" summary="2021-04-06 pagination for home page added">
+      <created>1617738802752</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617738802752</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2021-04-06 pagination for home page added" />
+    <MESSAGE value="2021-04-07 pagination for 'All entries'" />
+    <MESSAGE value="2021-04-12 pagination and sorting added" />
+    <option name="LAST_COMMIT_MESSAGE" value="2021-04-12 pagination and sorting added" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="168" key="#Notifications" timestamp="1618254473643">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="552" y="168" key="#Notifications/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618254473643" />
+    <state x="552" y="168" key="#Project_Structure" timestamp="1618256058262">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="552" y="168" key="#Project_Structure/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618256058262" />
+    <state x="414" y="164" width="1092" height="775" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617125066078">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="414" y="164" width="1092" height="775" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1019@0.0.1920.1019" timestamp="1617125066078" />
+    <state x="726" y="312" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617214578534">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="726" y="312" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1019@0.0.1920.1019" timestamp="1617214578534" />
+    <state x="765" y="193" key="#com.intellij.ide.util.MemberChooser" timestamp="1618158194033">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="765" y="-881" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1019/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1616440105395" />
+    <state x="765" y="193" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618158194033" />
+    <state x="765" y="193" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1019@0.0.1920.1019" timestamp="1617908407253" />
+    <state x="521" y="435" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1618330536436">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="521" y="435" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618330536436" />
+    <state x="490" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1617819321222">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="490" y="-1080" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1019/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1616173399859" />
+    <state x="490" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1617819321222" />
+    <state x="690" y="256" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1616003903085">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="690" y="256" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1019@0.0.1920.1019" timestamp="1616003903085" />
+    <state x="715" y="212" key="#xdebugger.evaluate" timestamp="1618246398803">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="715" y="212" key="#xdebugger.evaluate/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618246398803" />
+    <state x="608" y="104" key="CommitChangelistDialog2" timestamp="1618254880003">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="608" y="-973" key="CommitChangelistDialog2/0.0.1920.1019/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1618252901475" />
+    <state x="608" y="104" key="CommitChangelistDialog2/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618254880003" />
+    <state x="92" y="92" width="1736" height="835" key="DiffContextDialog" timestamp="1618257005233">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="92" y="92" width="1736" height="835" key="DiffContextDialog/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618257005233" />
+    <state x="740" y="264" key="FileChooserDialogImpl" timestamp="1618258035684">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="740" y="264" key="FileChooserDialogImpl/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618258035684" />
+    <state x="740" y="264" key="FileChooserDialogImpl/0.0.1920.1019@0.0.1920.1019" timestamp="1616002636652" />
+    <state x="782" y="425" key="Github.CreateGistDialog" timestamp="1618256269496">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="782" y="425" key="Github.CreateGistDialog/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618256269496" />
+    <state x="834" y="403" width="471" height="254" key="Github.ShareDialog" timestamp="1618255378847">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="834" y="403" width="471" height="254" key="Github.ShareDialog/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618255378847" />
+    <state width="1877" height="162" key="GridCell.Tab.0.bottom" timestamp="1618425080690">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state width="1574" height="162" key="GridCell.Tab.0.bottom/0.0.1920.1019/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1618253898959" />
+    <state width="1877" height="162" key="GridCell.Tab.0.bottom/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618425080690" />
+    <state width="1605" height="427" key="GridCell.Tab.0.bottom/0.0.1920.1019@0.0.1920.1019" timestamp="1617914298848" />
+    <state width="1877" height="162" key="GridCell.Tab.0.center" timestamp="1618425080690">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state width="1574" height="162" key="GridCell.Tab.0.center/0.0.1920.1019/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1618253898959" />
+    <state width="1877" height="162" key="GridCell.Tab.0.center/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618425080690" />
+    <state width="1605" height="427" key="GridCell.Tab.0.center/0.0.1920.1019@0.0.1920.1019" timestamp="1617914298848" />
+    <state width="1877" height="162" key="GridCell.Tab.0.left" timestamp="1618425080690">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state width="1574" height="162" key="GridCell.Tab.0.left/0.0.1920.1019/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1618253898959" />
+    <state width="1877" height="162" key="GridCell.Tab.0.left/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618425080690" />
+    <state width="1605" height="427" key="GridCell.Tab.0.left/0.0.1920.1019@0.0.1920.1019" timestamp="1617914298848" />
+    <state width="1877" height="162" key="GridCell.Tab.0.right" timestamp="1618425080690">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state width="1574" height="162" key="GridCell.Tab.0.right/0.0.1920.1019/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1618253898959" />
+    <state width="1877" height="162" key="GridCell.Tab.0.right/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618425080690" />
+    <state width="1605" height="427" key="GridCell.Tab.0.right/0.0.1920.1019@0.0.1920.1019" timestamp="1617914298848" />
+    <state width="1603" height="427" key="GridCell.Tab.1.bottom" timestamp="1618252459350">
+      <screen x="0" y="-1080" width="1920" height="1050" />
+    </state>
+    <state width="1603" height="427" key="GridCell.Tab.1.bottom/0.0.1920.1019/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1618252459350" />
+    <state width="1603" height="427" key="GridCell.Tab.1.bottom/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618246572554" />
+    <state width="1605" height="427" key="GridCell.Tab.1.bottom/0.0.1920.1019@0.0.1920.1019" timestamp="1617914298848" />
+    <state width="1603" height="427" key="GridCell.Tab.1.center" timestamp="1618252459349">
+      <screen x="0" y="-1080" width="1920" height="1050" />
+    </state>
+    <state width="1603" height="427" key="GridCell.Tab.1.center/0.0.1920.1019/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1618252459349" />
+    <state width="1603" height="427" key="GridCell.Tab.1.center/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618246572554" />
+    <state width="1605" height="427" key="GridCell.Tab.1.center/0.0.1920.1019@0.0.1920.1019" timestamp="1617914298848" />
+    <state width="1603" height="427" key="GridCell.Tab.1.left" timestamp="1618252459349">
+      <screen x="0" y="-1080" width="1920" height="1050" />
+    </state>
+    <state width="1603" height="427" key="GridCell.Tab.1.left/0.0.1920.1019/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1618252459349" />
+    <state width="1603" height="427" key="GridCell.Tab.1.left/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618246572554" />
+    <state width="1605" height="427" key="GridCell.Tab.1.left/0.0.1920.1019@0.0.1920.1019" timestamp="1617914298848" />
+    <state width="1603" height="427" key="GridCell.Tab.1.right" timestamp="1618252459350">
+      <screen x="0" y="-1080" width="1920" height="1050" />
+    </state>
+    <state width="1603" height="427" key="GridCell.Tab.1.right/0.0.1920.1019/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1618252459350" />
+    <state width="1603" height="427" key="GridCell.Tab.1.right/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618246572554" />
+    <state width="1605" height="427" key="GridCell.Tab.1.right/0.0.1920.1019@0.0.1920.1019" timestamp="1617914298848" />
+    <state x="490" y="164" key="Maven.ArtifactSearchDialog" timestamp="1616003648218">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="490" y="164" key="Maven.ArtifactSearchDialog/0.0.1920.1019@0.0.1920.1019" timestamp="1616003648218" />
+    <state x="625" y="208" key="NewModule_or_Project.wizard" timestamp="1618257835230">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="625" y="208" key="NewModule_or_Project.wizard/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618257835230" />
+    <state x="775" y="443" key="ReplaceDuplicatesPrompt" timestamp="1616952396260">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="775" y="443" key="ReplaceDuplicatesPrompt/0.0.1920.1019@0.0.1920.1019" timestamp="1616952396260" />
+    <state x="461" y="152" key="SettingsEditor" timestamp="1618257782268">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="461" y="-923" key="SettingsEditor/0.0.1920.1019/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1618252609473" />
+    <state x="461" y="152" key="SettingsEditor/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618257782268" />
+    <state x="461" y="152" key="SettingsEditor/0.0.1920.1019@0.0.1920.1019" timestamp="1617209612049" />
+    <state x="552" y="242" key="Vcs.Push.Dialog.v2" timestamp="1618258351999">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="552" y="-831" key="Vcs.Push.Dialog.v2/0.0.1920.1019/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1618252794928" />
+    <state x="552" y="242" key="Vcs.Push.Dialog.v2/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618258351999" />
+    <state x="92" y="92" width="1736" height="835" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1618256326029">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="92" y="92" width="1736" height="835" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618256326029" />
+    <state x="92" y="92" width="1736" height="835" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1618257181341">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="92" y="92" width="1736" height="835" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618257181341" />
+    <state x="656" y="333" key="com.intellij.ide.util.TipDialog" timestamp="1618423326578">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="656" y="333" key="com.intellij.ide.util.TipDialog/0.0.1920.1019/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1618252600934" />
+    <state x="656" y="333" key="com.intellij.ide.util.TipDialog/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618423326578" />
+    <state x="656" y="333" key="com.intellij.ide.util.TipDialog/0.0.1920.1019@0.0.1920.1019" timestamp="1617896854863" />
+    <state x="769" y="426" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618256519296">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="769" y="426" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618256519296" />
+    <state x="520" y="245" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1617033034799">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="520" y="245" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1019@0.0.1920.1019" timestamp="1617033034799" />
+    <state x="742" y="444" width="540" height="496" key="extract.method.dialog" timestamp="1616952394597">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="742" y="444" width="540" height="496" key="extract.method.dialog/0.0.1920.1019@0.0.1920.1019" timestamp="1616952394597" />
+    <state x="616" y="235" key="run.anything.popup" timestamp="1616953398447">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="616" y="235" key="run.anything.popup/0.0.1920.1019@0.0.1920.1019" timestamp="1616953398447" />
+    <state x="623" y="219" width="672" height="678" key="search.everywhere.popup" timestamp="1618256765645">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="623" y="219" width="672" height="678" key="search.everywhere.popup/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618256765645" />
+    <state x="623" y="219" width="672" height="678" key="search.everywhere.popup/0.0.1920.1019@0.0.1920.1019" timestamp="1616013050807" />
+    <state x="790" y="300" key="svn.repositoryBrowser" timestamp="1618256012076">
+      <screen x="0" y="0" width="1920" height="1019" />
+    </state>
+    <state x="790" y="300" key="svn.repositoryBrowser/0.0.1920.1019/0.-1080.1920.1050@0.0.1920.1019" timestamp="1618256012076" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Remote">
+        <watch expression="entryDto.title" />
+        <watch expression="method" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

@@ -53,7 +53,8 @@
 <div align="center">
   <figure>
     <a href="images/screenshot_main.png"><img src="images/screenshot_main.png" height="auto" width="450" style="border-radius:5px"></a>
-    <figcaption>Fig.1 - Screenshot from the application.</figcaption>
+    <br>
+    <div style='color:grey'><sup>Fig.1 - Screenshot from the application.</sup></div>
     </figure>
 </div>
 This project was created in order to learn more on java web applications and acquire good programming habits.  Great attention was paid on clean code rules while writing the code. Domain-driven-design principles were followed while building the application. Each of the domain layer has its own role in the application - some of them might have been used a bit excessively taking into consideration app simplicity. Journal is backed by H2 database. For retrieving and saving data to database JPA Repository was used - that allowed for simple sorting and pagination of retrieved data.
@@ -61,14 +62,16 @@ This project was created in order to learn more on java web applications and acq
 <div align="center">
   <figure>
     <a href="images/screenshot_validation.png"><img src="images/screenshot_validation.png" height="auto" width="450" style="border-radius:5px"></a>
-    <figcaption>Fig.2 - Form input validation.</figcaption>
+    <br>
+    <div style='color:grey'><sup>Fig.2 - Form input validation.</sup></div>
     </figure>
 </div>
 
 <div align="center">
   <figure>
     <a href="images/screenshot_search.png"><img src="images/screenshot_search.png" height="auto" width="450" style="border-radius:5px"></a>
-    <figcaption>Fig.3 - Search results that allow on edition and deletion.</figcaption>
+    <br>
+    <div style='color:grey'><sup>Fig.3 - Search results that allow on edition and deletion.</sup></div>
     </figure>
 </div>
 
@@ -79,7 +82,8 @@ Find below UML class diagram for the application:
 <div align="center">
   <figure>
     <a href="images/journal-app_UML_class.png"><img src="images/journal-app_UML_class.png" height="auto" width="600" style="border-radius:5px"></a>
-    <figcaption>Fig.4 - UML class diagram.</figcaption>
+    <br>
+    <div style='color:grey'><sup>Fig.4 - UML class diagram.</sup></div>
     </figure>
 </div>
 
