@@ -15,7 +15,11 @@ import java.util.stream.Collectors;
 public class JournalEntryServiceImpl implements JournalEntryService {
 
     @Autowired
-    private JournalEntryRepository repository;
+    private final JournalEntryRepository repository;
+
+    public JournalEntryServiceImpl(JournalEntryRepository repository) {
+        this.repository = repository;
+    }
 
     public void add(JournalEntryDto entryDto){
         JournalEntry entry = JournalEntryUtility.buildJournalEntry(entryDto);

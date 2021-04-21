@@ -13,7 +13,11 @@ import java.util.NoSuchElementException;
 @Component
 public class JournalEntryRepository {
     @Autowired
-    private JournalEntryDao journalEntryDao;
+    private final JournalEntryDao journalEntryDao;
+
+    public JournalEntryRepository(JournalEntryDao journalEntryDao) {
+        this.journalEntryDao = journalEntryDao;
+    }
 
     public void add(JournalEntry entry){
         journalEntryDao.save(entry);

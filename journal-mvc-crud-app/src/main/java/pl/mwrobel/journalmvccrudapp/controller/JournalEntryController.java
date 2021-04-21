@@ -16,10 +16,14 @@ import java.util.List;
 @Controller
 public class JournalEntryController {
     @Autowired
-    private JournalEntryService journalEntryService;
+    private final JournalEntryService journalEntryService;
 
     private String sortColumnChosen = "id";
     private Boolean isAscendingOrderChosen = true;
+
+    public JournalEntryController(JournalEntryService journalEntryService) {
+        this.journalEntryService = journalEntryService;
+    }
 
     private void setSortColumnChosen(String sortColumnChosen) {
         this.sortColumnChosen = sortColumnChosen;

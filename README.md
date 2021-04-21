@@ -48,7 +48,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
   
-:notebook: Application is a simple journal that allows for adding new entries, update and delete existing one. User also might look for the specific entry using Search form. While adding or updating the entry the data inserted is validated. Entries in the journal might be categorized.
+:notebook: Application is a simple journal that allows adding new entries, update and delete existing ones. User also might look for the specific entry using search form. While adding or updating the entry the data inserted is validated. Entries in the journal might be categorized.
 
 <div align="center">
   <figure>
